@@ -5,7 +5,7 @@ import ast
 
 from functions import calcArea, calcVolumes, showErrorBar, showLinearRegression
 
-dataFrame = pd.read_csv("data.csv", converters={'Diameters': lambda x: ast.literal_eval(x)}) # Diameters convertido a listas
+dataFrame = pd.read_csv("measures.csv", converters={'Diameters': lambda x: ast.literal_eval(x)}) # Diameters convertido a listas
 
 def main():
 
@@ -52,7 +52,7 @@ def main():
 
      dataFrame["Volume"] = volumes
 
-     dataFrame.to_csv("data.csv", index=False)
+     dataFrame.to_csv("data.csv", index=False) 
 
      # ==========================================================================================================================================
 
